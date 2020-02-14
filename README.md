@@ -33,9 +33,9 @@ dependencies {
 
 Kalle requires at minimum Android 4.4(Api level 19).
 
-## Contributing
+## 使用
 
-Before submitting pull requests, contributors must abide by the [agreement](CONTRIBUTING.md) .
+[wiki](https://github.com/benzly/pocDemo/wiki) .
 
 ## License
 
