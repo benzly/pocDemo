@@ -2,7 +2,7 @@
 
 ![Logo](https://s.beta.gtimg.com/rdmimg/exp/image2/2018/06/08/_27617a9f-5695-4cd8-ac5a-a05fe10f7525.png)
 
-一个可使用极简API实现以下功能的SDK
+一个可使用pocSDK实现以下功能的Demo
 
   - 音频通话
   - 视频通话
@@ -12,9 +12,9 @@
   - 位置上报
   - 一键报警
 
-## Download
+## 项目中引入SDK
 
-Kalle uses URLConnection handle socket by default, add this dependency using Gradle:
+pocSDK 发布在JCenter中，使用Gradle构建:
 
 ```groovy
 //根目录下build.gradle添加
@@ -31,11 +31,11 @@ dependencies {
 }
 ```
 
-Kalle requires at minimum Android 4.4(Api level 19).
+pocSDK requires at minimum Android 4.4(Api level 19).
 
-## 使用
+## SDK文档
 
-[wiki](https://github.com/benzly/pocDemo/wiki)
+SDK详细使用说明[wiki](https://github.com/benzly/pocDemo/wiki)
 
 ## License
 
