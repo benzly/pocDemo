@@ -17,16 +17,21 @@
 Kalle uses URLConnection handle socket by default, add this dependency using Gradle:
 
 ```groovy
-implementation 'com.yanzhenjie:kalle:0.1.7'
+//根目录下build.gradle添加
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://dl.bintray.com/huamai/maven' }
+    }
+}
+
+//app下build.gradle添加
+dependencies {
+    implementation 'com.huamai:poc:1.7.3.4'
+}
 ```
 
-If you want to use okhttp handle socket, add this dependency using Gradle:
-
-```groovy
-implementation 'com.yanzhenjie:okalle:0.1.7'
-```
-
-Kalle requires at minimum Android 2.3(Api level 9).
+Kalle requires at minimum Android 4.4(Api level 19).
 
 ## Contributing
 
@@ -35,7 +40,7 @@ Before submitting pull requests, contributors must abide by the [agreement](CONT
 ## License
 
 ```text
-Copyright 2019 Zhenjie Yan
+Copyright 2020 HuaiMai
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
