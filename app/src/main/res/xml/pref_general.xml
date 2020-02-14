@@ -1,0 +1,78 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="video_landscape"
+        android:title="视频横屏" />
+
+    <SwitchPreference
+        android:key="qos_fec_switch"
+        android:title="丢包保护" />
+
+    <ListPreference
+        android:entries="@array/pref_fec_rate_list_values"
+        android:entryValues="@array/pref_fec_rate_list_values"
+        android:key="fec_rate_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:summary="@string/pref_fec_rate_summary"
+        android:title="@string/pref_fec_rate_title" />
+
+    <ListPreference
+        android:entries="@array/pref_resolution_list_entries"
+        android:entryValues="@array/pref_example_list_values"
+        android:key="resolution_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_resolution_title" />
+
+    <ListPreference
+        android:entries="@array/pref_fps_list_values"
+        android:entryValues="@array/pref_fps_list_values"
+        android:key="fps_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_fps_title" />
+
+    <ListPreference
+        android:entries="@array/pref_bitrate_list_values"
+        android:entryValues="@array/pref_bitrate_list_values"
+        android:key="bitrate_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_bitrate_title" />
+
+    <ListPreference
+        android:entries="@array/pref_agc_level_list_values"
+        android:entryValues="@array/pref_agc_level_list_values"
+        android:key="agc_level_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:summary="@string/pref_agc_level_summary"
+        android:title="@string/pref_agc_level_title" />
+
+    <ListPreference
+        android:entries="@array/pref_ns_level_list_values"
+        android:entryValues="@array/pref_ns_level_list_values"
+        android:key="ns_level_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:summary="@string/pref_ns_level_summary"
+        android:title="@string/pref_ns_level_title" />
+
+    <!--<SwitchPreference
+        android:defaultValue="true"
+        android:key="example_switch"
+        android:summary="@string/pref_description_social_recommendations"
+        android:title="@string/pref_title_social_recommendations" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_display_name"
+        android:inputType="textCapWords"
+        android:key="example_text"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_display_name" />-->
+
+</PreferenceScreen>

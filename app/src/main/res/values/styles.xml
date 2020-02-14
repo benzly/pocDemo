@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="PocTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Toolbar颜色 -->
+        <item name="android:colorPrimary" tools:targetApi="lollipop">@color/primary</item>
+        <!-- Actionbar颜色 -->
+        <item name="colorPrimary">@color/primary</item>
+        <!-- 状态栏颜色 -->
+        <item name="android:colorPrimaryDark" tools:targetApi="lollipop">@color/primary_dark</item>
+    </style>
+
+    <style name="PocTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="PocTheme" parent="Theme.AppCompat.Light">
+        <!-- Toolbar颜色 -->
+        <item name="android:colorPrimary" tools:targetApi="lollipop">@color/primary</item>
+        <!-- Actionbar颜色 -->
+        <item name="colorPrimary">@color/primary</item>
+        <!-- 状态栏颜色 -->
+        <item name="android:colorPrimaryDark" tools:targetApi="lollipop">@color/primary_dark</item>
+        <!-- 返回键样式 -->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+
+    <style name="PocTheme_NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Toolbar颜色 -->
+        <item name="android:colorPrimary" tools:targetApi="lollipop">@color/primary</item>
+        <!-- 状态栏颜色 -->
+        <item name="android:colorPrimaryDark" tools:targetApi="lollipop">@color/primary_dark</item>
+        <!-- 返回键样式 -->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+</resources>

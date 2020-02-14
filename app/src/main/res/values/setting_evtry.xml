@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_resolution_title">分辨率</string>
+    <string-array name="pref_resolution_list_entries">
+        <item>320X240</item>
+        <item>640X480</item>
+        <item>1280X720</item>
+    </string-array>
+
+    <string name="pref_fps_title">视频帧率</string>
+    <string-array name="pref_fps_list_values">
+        <item>7</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>24</item>
+    </string-array>
+
+    <string name="pref_bitrate_title">视频码率</string>
+    <string-array name="pref_bitrate_list_values">
+        <item>300</item>
+        <item>700</item>
+        <item>1200</item>
+    </string-array>
+
+    <string name="pref_fec_rate_title">丢包保护冗余度</string>
+    <string name="pref_fec_rate_summary">值越大，抗丢包能力越强，但同时需要更多带宽，建议用默认值不变</string>
+    <string-array name="pref_fec_rate_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="pref_agc_level_title">回声抑制级别</string>
+    <string name="pref_agc_level_summary">外放音量过大时可适当增加，提高回声及啸叫抑制效果</string>
+    <string-array name="pref_agc_level_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+    </string-array>
+
+    <string name="pref_ns_level_title">噪声抑制级别</string>
+    <string name="pref_ns_level_summary">值越大噪声消除效果更好</string>
+    <string-array name="pref_ns_level_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

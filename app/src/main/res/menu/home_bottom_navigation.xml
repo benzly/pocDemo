@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_ptt"
+        android:icon="@drawable/ic_ptt_black_24dp"
+        android:title="Ptt" />
+
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/ic_message_black_24dp"
+        android:title="Message" />
+
+    <item
+        android:id="@+id/navigation_contacts"
+        android:icon="@drawable/ic_contacts_black_24dp"
+        android:title="Channel" />
+
+    <item
+        android:id="@+id/navigation_channel_list"
+        android:icon="@drawable/ic_channel_list_black_24dp"
+        android:title="Channel" />
+
+    <item
+        android:id="@+id/navigation_other"
+        android:icon="@drawable/ic_other_black_24dp"
+        android:title="Other" />
+</menu>

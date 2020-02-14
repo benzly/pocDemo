@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/status_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true">
+
+    <ImageView
+        android:id="@+id/status_icon"
+        android:layout_width="10dip"
+        android:layout_height="10dip"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/unread_icon"
+        android:layout_width="15dip"
+        android:layout_height="15dip"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/status_tip"
+        android:src="@drawable/ic_message_status_hasnew"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/sending_progressbar"
+        android:layout_width="15dip"
+        android:layout_height="15dip"
+        android:layout_centerInParent="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/ani_chat_send_status_progressbar"
+        android:indeterminateOnly="true" />
+
+</RelativeLayout>

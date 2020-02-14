@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:Android="http://schemas.android.com/apk/res/android"
+    Android:drawable="@drawable/ic_chat_send_status"
+    Android:pivotX="50%"
+    Android:pivotY="50%" />

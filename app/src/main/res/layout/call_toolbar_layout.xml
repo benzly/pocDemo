@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_call_menu_panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dip"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_end_call"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            android:src="@drawable/union_toolbar_handup_bt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:text="@string/union_toolbar_handup" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <!-- 静音 -->
+        <ImageButton
+            android:id="@+id/video_call_mute_btn"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_volume_un_mute" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="@string/union_toolbar_mute" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <!-- 免提 -->
+        <ImageButton
+            android:id="@+id/btn_hangfree"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toolbar_handfree_off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="@string/union_toolbar_handsfree" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <!-- 切换 -->
+        <ImageButton
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toolbar_capture" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="@string/union_toolbar_camera_switch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_voice"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toolbar_audio_only_on" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="@string/union_toolbar_only_audio" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/btn_dispatch"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toolbar_add_person" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="@string/union_toolbar_invite" />
+    </LinearLayout>
+</LinearLayout>

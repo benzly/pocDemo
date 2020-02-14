@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="7dip"
+    android:paddingTop="7dip">
+
+    <include
+        android:id="@+id/time_stamp"
+        layout="@layout/chat_message_time_stamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip" />
+
+    <RelativeLayout
+        android:id="@+id/content_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_stamp"
+        android:layout_marginEnd="40dip"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:paddingEnd="5dip"
+        android:paddingStart="5dip">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_chat_default_icon" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginStart="10dip"
+            android:layout_toEndOf="@id/icon"
+            android:text="name"
+            android:textColor="#AAAAAA" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginStart="3dip"
+            android:layout_toEndOf="@id/icon">
+
+            <my.poc.demo.widget.ChatMessageContainer
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:transitionName="sharedView" />
+
+            <include
+                layout="@layout/chat_message_send_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="7dip"
+                android:layout_toEndOf="@id/content" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

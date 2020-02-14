@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB">
+
+    <RelativeLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/primary">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="50dip"
+            android:layout_marginStart="10dip"
+            android:clickable="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_panel"
+        android:layout_marginBottom="50dip"
+        android:paddingBottom="10dip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginEnd="65dip"
+        android:layout_marginStart="10dip"
+        android:background="@drawable/ic_input_layout_bg">
+
+        <ImageView
+            android:id="@+id/input_cam"
+            android:layout_width="26dip"
+            android:layout_height="26dip"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dip"
+            android:src="@drawable/input_cam"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/input_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dip"
+            android:layout_toStartOf="@id/input_cam"
+            android:background="@android:color/transparent"
+            android:textColor="#4d4d4d"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chat_send_panel"
+        android:layout_width="55dip"
+        android:layout_height="55dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginEnd="10dip"
+        android:background="@drawable/selector_chat_sendmsg_bg"
+        android:clickable="true"
+        android:clipChildren="false">
+
+        <ImageView
+            android:id="@+id/send_bt"
+            android:layout_width="26dip"
+            android:layout_height="26dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_input_voice" />
+    </RelativeLayout>
+</RelativeLayout>

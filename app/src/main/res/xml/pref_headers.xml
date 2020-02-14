@@ -1,0 +1,13 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="my.poc.demo.activity.SettingsActivity$GeneralPreferenceFragment"
+        android:icon="@drawable/ic_subscriptions_black_24dp"
+        android:title="通话相关" />
+
+    <header
+        android:fragment="my.poc.demo.activity.SettingsActivity$OtherPreferenceFragment"
+        android:icon="@drawable/ic_beach_access_black_24dp"
+        android:title="其它" />
+
+</preference-headers>

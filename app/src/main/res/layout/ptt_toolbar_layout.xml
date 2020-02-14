@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_call_menu_panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ptt_exit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ptt_exit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/actionbar_button_connected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:text="离开"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ptt_exit_and_reset_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ptt_exit_and_reset"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/actionbar_button_connected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:text="回到默认组"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_back_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/video_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:padding="5dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toolbar_videoback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="回传"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_photo_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/take_photo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toolbar_capture" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="拍传"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_video_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/take_video"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/union_toolbar_button_bg_selector"
+            android:padding="8dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toolbar_video_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dip"
+            android:text="报警"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>
