@@ -35,7 +35,7 @@ Kalle requires at minimum Android 4.4(Api level 19).
 
 ## 使用
 
-[wiki](https://github.com/benzly/pocDemo/wiki) .
+[wiki](https://github.com/benzly/pocDemo/wiki)
 
 ## License
 
