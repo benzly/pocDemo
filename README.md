@@ -14,7 +14,7 @@
 
 ## 项目中引入SDK
 
-pocSDK 发布在JCenter中，使用Gradle构建:
+pocSDK 发布在Maven中，使用Gradle构建:
 
 ```groovy
 //根目录下build.gradle添加
