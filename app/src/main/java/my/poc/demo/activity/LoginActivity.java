@@ -32,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
     private View mProgressView;
     private View mLoginFormView;
 
-
     SharedPreferences mSharedPreferences;
 
     @Override
@@ -71,13 +70,6 @@ public class LoginActivity extends AppCompatActivity {
         if (PocEngineFactory.get().hasServiceConnected()) {
             LoginActivity.this.startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             LoginActivity.this.finish();
-        } else {
-            signInButton.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    //signInButton.performClick();
-                }
-            }, 1000);
         }
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
@@ -90,6 +82,12 @@ public class LoginActivity extends AppCompatActivity {
                 PocEngineFactory.get().login("");
             }
         });
+
+        //自动登录
+        boolean isAutoLogin = mSharedPreferences.getBoolean("autoLogin", false);
+        if (isAutoLogin) {
+            signInButton.performClick();
+        }
     }
 
     private void attemptLogin() {

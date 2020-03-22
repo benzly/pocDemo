@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.widget.Toast;
-
+import android.support.annotation.NonNull;
 import com.baidu.mapapi.SDKInitializer;
 import com.huamai.poc.IPocEngineEventHandler;
 import com.huamai.poc.PocEngine;
@@ -58,7 +58,7 @@ public class MyApplication extends PocApplication {
         //使用音乐通道
         configure.useMusicStream = false;
         //对讲录音
-        configure.pttPlayback = false;
+        configure.pttPlayback = true;
         //防杀服务
         configure.keepLiveService = true;
         //视频通话分辨率，需要和调度台中设置的值一样才能生效

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion "${compile_sdk_version}" as Integer
@@ -41,7 +42,21 @@ android {
 }
 
 dependencies {
-    implementation 'com.huamai:poc:1.7.3.4'
+    //从maven引入aar
+    implementation 'com.huamai:poc-sdk:2.0.1.2'
+
+    //从本地引入aar
+//    implementation(name: 'poc-sdk-release-v1.7.3.4', ext: 'aar')
+//    //aar内有依赖以下库，需要app帮忙引入
+//    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+//    implementation 'org.greenrobot:eventbus:3.1.1'
+//    implementation 'com.yanzhenjie:okalle:0.1.7'
+//    implementation 'org.simpleframework:simple-xml:2.7.1'
+//    implementation 'com.android.support:multidex:1.0.3'
+//    implementation 'com.google.code.gson:gson:1.7.1'
+
+
+    //demo本身需要的
     implementation files('libs/BaiduLBS_Android.jar')
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'

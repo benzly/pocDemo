@@ -1,5 +1,6 @@
 package my.poc.demo.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -195,14 +196,8 @@ public class HomeActivity extends AppCompatActivity
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (id == R.id.nav_logout) {
             Toast.makeText(this, "退出", Toast.LENGTH_SHORT).show();
+            getSharedPreferences("poc-demo", Context.MODE_PRIVATE).edit().putBoolean("autoLogin", false).commit();
             pocEngine.logout();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-                    HomeActivity.this.finish();
-                }
-            }, 500);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
