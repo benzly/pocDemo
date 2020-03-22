@@ -21,13 +21,13 @@ pocSDK 发布在Maven中，使用Gradle构建:
 allprojects {
     repositories {
         jcenter()
-        maven { url 'https://dl.bintray.com/huamai/maven' }
+        maven { url 'https://dl.bintray.com/benzly/maven' }
     }
 }
 
 //app下build.gradle添加
 dependencies {
-    implementation 'com.huamai:poc:1.7.3.4'
+    implementation 'com.huamai:poc:2.0.1.2'
 }
 ```
 
