@@ -27,7 +27,7 @@ allprojects {
 
 //app下build.gradle添加
 dependencies {
-    implementation 'com.huamai:poc:2.0.1.2'
+    implementation 'com.huamai:poc:2.0.7'
 }
 ```
 
