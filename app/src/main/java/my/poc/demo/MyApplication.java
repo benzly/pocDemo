@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.widget.Toast;
-import android.support.annotation.NonNull;
+
 import com.baidu.mapapi.SDKInitializer;
 import com.huamai.poc.IPocEngineEventHandler;
 import com.huamai.poc.PocEngine;
