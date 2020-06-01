@@ -43,7 +43,7 @@ android {
 
 dependencies {
     //从maven引入aar
-    implementation 'com.huamai:poc-sdk:2.1.0.3'
+    implementation 'com.huamai:poc-sdk:2.1.5'
 
 //    //aar内有依赖以下库，需要app帮忙引入
 //    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
