@@ -27,6 +27,7 @@ public class SettingsActivity extends PreferenceActivity {
             String key = preference.getKey();
             PocEngine.Configure configure = PocEngineFactory.get().getConfig();
 
+
             //fragment1
             if ("resolution_list".equals(key)) {
                 configure.videoResolution = Integer.valueOf(value + "");
