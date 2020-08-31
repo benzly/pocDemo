@@ -27,7 +27,8 @@ allprojects {
 
 //app下build.gradle添加
 dependencies {
-    implementation 'com.huamai:poc:2.0.7'
+    //引入aar
+    implementation 'com.huamai:poc-sdk:2.2.0-dev5'
 }
 ```
 
