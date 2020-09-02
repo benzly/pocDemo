@@ -44,15 +44,7 @@ android {
 dependencies {
     //从maven引入aar
     implementation 'com.huamai:poc-sdk:2.2.0-dev4'
-
-//    //aar内有依赖以下库，需要app帮忙引入
-//    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-//    implementation 'org.greenrobot:eventbus:3.1.1'
-//    implementation 'com.yanzhenjie:okalle:0.1.7'
-//    implementation 'org.simpleframework:simple-xml:2.7.1'
-//    implementation 'com.android.support:multidex:1.0.3'
-//    implementation 'com.google.code.gson:gson:1.7.1'
-
+    implementation 'com.android.support:multidex:1.0.3'
 
     //demo本身需要的
     implementation files('libs/BaiduLBS_Android.jar')
