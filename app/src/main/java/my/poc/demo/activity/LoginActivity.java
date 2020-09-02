@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -19,6 +18,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.huamai.poc.IPocEngineEventHandler;
 import com.huamai.poc.PocEngineFactory;
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+
 
     SharedPreferences mSharedPreferences;
 
@@ -70,6 +72,13 @@ public class LoginActivity extends AppCompatActivity {
         if (PocEngineFactory.get().hasServiceConnected()) {
             LoginActivity.this.startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             LoginActivity.this.finish();
+        } else {
+            signInButton.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    //signInButton.performClick();
+                }
+            }, 1000);
         }
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
@@ -82,17 +91,6 @@ public class LoginActivity extends AppCompatActivity {
                 PocEngineFactory.get().login("");
             }
         });
-
-        //自动登录
-        boolean isAutoLogin = mSharedPreferences.getBoolean("autoLogin", false);
-        if (isAutoLogin) {
-            signInButton.performClick();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 
     private void attemptLogin() {
@@ -216,4 +214,3 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.tips).setVisibility(show ? View.VISIBLE : View.GONE);
     }
 }
-

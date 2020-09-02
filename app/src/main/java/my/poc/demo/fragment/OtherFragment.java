@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +14,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.huamai.poc.IPocEngineEventHandler;
 import com.huamai.poc.PocEngine;
@@ -26,6 +27,7 @@ import com.huamai.poc.greendao.Department;
 import com.huamai.poc.greendao.MessageDialogue;
 import com.huamai.poc.greendao.User;
 import com.tencent.bugly.crashreport.CrashReport;
+import com.unionbroad.app.holder.CurrentChannelHolder;
 import com.unionbroad.app.manager.TTSManager;
 import com.unionbroad.app.util.Logger;
 
@@ -72,6 +74,7 @@ public class OtherFragment extends Fragment {
         console = (TextView) rootView.findViewById(R.id.console);
         funcContentLayout = (LinearLayout) rootView.findViewById(R.id.func_content_layout);
 
+        showCurrentChannelUsers();
         showDepartments();
         showDispatchUsers();
         showSDKVersionInfo();
@@ -102,6 +105,25 @@ public class OtherFragment extends Fragment {
         showMessageUnReadFunc();
         showSetMessageAsReadFunc();
         showCrashFunc();
+    }
+
+    private void showCurrentChannelUsers() {
+        Button button = new Button(getContext());
+        button.setText("获取当前组成员");
+        funcContentLayout.addView(button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Channel channel = CurrentChannelHolder.getInstance().getCurrentChannel();
+                List<User> list = channel.getUsers();
+                StringBuilder sb = new StringBuilder();
+                for (User user : list) {
+                    sb.append(user.getName()).append(",");
+                }
+                console.setText(sb.toString());
+            }
+        });
     }
 
     private void showDepartments() {
@@ -356,7 +378,7 @@ public class OtherFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pocEngine.setCurrentStreamVolumeLevel(5, AudioManager.FLAG_PLAY_SOUND);
+                pocEngine.setCurrentStreamVolumeLevel(5, AudioManager.FLAG_SHOW_UI);
             }
         });
     }
@@ -369,7 +391,7 @@ public class OtherFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pocEngine.volumeUp(AudioManager.FLAG_PLAY_SOUND);
+                pocEngine.volumeUp(AudioManager.FLAG_SHOW_UI);
             }
         });
     }
@@ -382,7 +404,7 @@ public class OtherFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pocEngine.volumeDown(AudioManager.FLAG_PLAY_SOUND);
+                pocEngine.volumeDown(AudioManager.FLAG_SHOW_UI);
             }
         });
     }

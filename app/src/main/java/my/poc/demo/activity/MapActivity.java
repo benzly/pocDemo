@@ -4,8 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;

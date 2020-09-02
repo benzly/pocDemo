@@ -43,12 +43,21 @@ android {
 
 dependencies {
     //从maven引入aar
-    implementation 'com.huamai:poc-sdk:2.2.0-dev4'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.huamai:poc-sdk:2.1.4-androidx'
+//    implementation 'com.android.support:multidex:1.0.3'
 
-    //demo本身需要的
-    implementation files('libs/BaiduLBS_Android.jar')
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation files('libs/BaiduLBS_Android.jar')
+
+
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //新增
+    implementation 'com.yanzhenjie:okalle:0.1.7'
+    implementation 'org.simpleframework:simple-xml:2.7.1'
+    implementation 'com.google.code.gson:gson:1.7.1'
 }

@@ -2,6 +2,7 @@ package my.poc.demo;
 
 
 import android.app.ActivityManager;
+import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -29,7 +30,7 @@ import java.util.List;
 import my.poc.demo.activity.AvActivity;
 
 
-public class MyApplication extends PocApplication {
+public class MyApplication extends Application {
 
     private Logger logger = Logger.getLogger("MyApplication");
 
@@ -198,7 +199,8 @@ public class MyApplication extends PocApplication {
                 }
                 //对讲录音，只有开启对讲回放功能，每次有人讲话时，才会把声音录制下来
                 else if (message.getCategory() == ChatMessageCategory.PTT_AUDIO_FILE) {
-                    logger.i("==> 对讲录音消息");
+                    logger.i("==> 对讲录音消息 " + message.getRemote_number() + " "
+                            + message.getRemote_name() + " isOut=" + message.getIs_out());
                 }
                 //视频消息，类似微信的视频消息
                 else if (message.getCategory() == ChatMessageCategory.VIDEO_FILE) {

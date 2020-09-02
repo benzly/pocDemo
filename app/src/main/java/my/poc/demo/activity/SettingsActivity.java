@@ -27,7 +27,6 @@ public class SettingsActivity extends PreferenceActivity {
             String key = preference.getKey();
             PocEngine.Configure configure = PocEngineFactory.get().getConfig();
 
-
             //fragment1
             if ("resolution_list".equals(key)) {
                 configure.videoResolution = Integer.valueOf(value + "");
@@ -69,6 +68,7 @@ public class SettingsActivity extends PreferenceActivity {
         PocEngine.Configure configure = PocEngineFactory.get().getConfig();
         //测试默认数据
         configure.qosFec = true;
+        configure.videoLandscape = true;
 
         String key = preference.getKey();
         if ("resolution_list".equals(key)) {
@@ -94,7 +94,7 @@ public class SettingsActivity extends PreferenceActivity {
             preference.setDefaultValue(configure.audioNsLevel);
         } else if ("video_landscape".equals(key)) {
             sBindPreferenceSummaryToValueListener.onPreferenceChange(preference, configure.videoFecRate);
-//            preference.setDefaultValue(configure.videoLandscape);
+            preference.setDefaultValue(configure.videoLandscape);
         }  else if ("qos_fec_switch".equals(key)) {
             sBindPreferenceSummaryToValueListener.onPreferenceChange(preference, configure.qosFec);
             preference.setDefaultValue(configure.qosFec);

@@ -1,26 +1,25 @@
 package my.poc.demo.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.media.AudioManager;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 import com.huamai.poc.IPocEngineEventHandler;
 import com.huamai.poc.PocEngine;
 import com.huamai.poc.PocEngineFactory;
@@ -81,6 +80,7 @@ public class HomeActivity extends AppCompatActivity
         sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         viewPager = (InterceptViewPager) findViewById(R.id.container);
         viewPager.setAdapter(sectionsPagerAdapter);
+        viewPager.setOffscreenPageLimit(4);
 
         navTitle = (TextView) navigationView.getHeaderView(0).findViewById(R.id.nav_title);
         navSubTitle = (TextView) navigationView.getHeaderView(0).findViewById(R.id.nav_sub_title);
@@ -106,7 +106,7 @@ public class HomeActivity extends AppCompatActivity
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        public boolean onNavigationItemSelected(MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_ptt:
                     viewPager.setCurrentItem(0);
@@ -196,8 +196,14 @@ public class HomeActivity extends AppCompatActivity
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (id == R.id.nav_logout) {
             Toast.makeText(this, "退出", Toast.LENGTH_SHORT).show();
-            getSharedPreferences("poc-demo", Context.MODE_PRIVATE).edit().putBoolean("autoLogin", false).commit();
             pocEngine.logout();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                    HomeActivity.this.finish();
+                }
+            }, 500);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
