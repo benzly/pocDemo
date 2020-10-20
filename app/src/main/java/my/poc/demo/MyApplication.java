@@ -64,6 +64,7 @@ public class MyApplication extends Application {
         configure.keepLiveService = true;
         //视频通话分辨率，需要和调度台中设置的值一样才能生效
         configure.videoResolution = IPocEngineEventHandler.VideoResolution.RESOLUTION_640X480;
+        configure.disableInternalGpsFunc = true;
         //缓存提供器，没特殊要求用不到
         //configure.cacheFileSupplier = cacheFileSupplier;
         //侧边功能键注册，一般都用不到
