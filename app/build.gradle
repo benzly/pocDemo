@@ -55,7 +55,7 @@ android {
 
 dependencies {
     //从maven引入aar
-    implementation 'com.huamai:poc-sdk:2.2.0-dev26'
+    implementation 'com.huamai:poc-sdk:2.2.0-dev31.1'
     implementation 'com.android.support:multidex:1.0.3'
 
     //demo本身需要的
