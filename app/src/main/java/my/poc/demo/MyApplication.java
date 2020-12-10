@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -29,7 +30,7 @@ import java.util.List;
 import my.poc.demo.activity.AvActivity;
 
 
-public class MyApplication extends PocApplication {
+public class MyApplication extends MultiDexApplication {
 
     private Logger logger = Logger.getLogger("MyApplication");
 

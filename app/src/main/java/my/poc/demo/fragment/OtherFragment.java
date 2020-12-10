@@ -72,6 +72,7 @@ public class OtherFragment extends Fragment {
         console = (TextView) rootView.findViewById(R.id.console);
         funcContentLayout = (LinearLayout) rootView.findViewById(R.id.func_content_layout);
 
+        showAutoFeedback();
         showDepartments();
         showDispatchUsers();
         showSDKVersionInfo();
@@ -102,6 +103,19 @@ public class OtherFragment extends Fragment {
         showMessageUnReadFunc();
         showSetMessageAsReadFunc();
         showCrashFunc();
+    }
+
+    private void showAutoFeedback() {
+        Button button = new Button(getContext());
+        button.setText("主动反馈log");
+        funcContentLayout.addView(button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pocEngine.autoFeedback();
+            }
+        });
     }
 
     private void showDepartments() {
