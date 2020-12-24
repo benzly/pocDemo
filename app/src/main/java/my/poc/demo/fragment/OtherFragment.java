@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hm.poc.api.Configure;
 import com.huamai.poc.IPocEngineEventHandler;
 import com.huamai.poc.PocEngine;
 import com.huamai.poc.PocEngineFactory;
@@ -113,7 +114,7 @@ public class OtherFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pocEngine.autoFeedback();
+//                pocEngine.autoFeedback();
             }
         });
     }
@@ -175,7 +176,7 @@ public class OtherFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                IPocEngineEventHandler.LocationReportInfo info =
+                Configure.LocationReportInfo info =
                         pocEngine.getLastLocationReportInfo();
                 StringBuilder sb = new StringBuilder();
                 sb.append("jd=" + info.jd + " wd=" + info.wd + " time=" + info.time);
@@ -476,9 +477,9 @@ public class OtherFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 final String[] items = new String[]{
-                        "低功耗 " + IPocEngineEventHandler.GpsMode.LOW_POWER_CONSUMPTION,
-                        "高精度 " + IPocEngineEventHandler.GpsMode.NET_AND_GPS,
-                        "仅gps " + IPocEngineEventHandler.GpsMode.ONLY_GPS
+                        "低功耗 " + Configure.GpsMode.LOW_POWER_CONSUMPTION,
+                        "高精度 " + Configure.GpsMode.NET_AND_GPS,
+                        "仅gps " + Configure.GpsMode.ONLY_GPS
 
                 };
                 new AlertDialog.Builder(getContext()).setItems(items, new DialogInterface.OnClickListener() {
@@ -526,7 +527,7 @@ public class OtherFragment extends Fragment {
                         if (user.getStatus() == 1 && user.getNumber() == 2008) {
                             Intent intent = new Intent(getContext().getApplicationContext(), AvActivity.class);
                             intent.putExtra("callerId", user.getNumber() + "");
-                            intent.putExtra("type", IPocEngineEventHandler.SessionType.TYPE_VIDEO_MONITOR_CALL);
+                            intent.putExtra("type", Configure.SessionType.TYPE_VIDEO_MONITOR_CALL);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getContext().startActivity(intent);
                             break;

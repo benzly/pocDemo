@@ -10,6 +10,8 @@ import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.hm.poc.api.CacheFileSupplier;
+import com.hm.poc.api.Configure;
 import com.huamai.poc.IPocEngineEventHandler;
 import com.huamai.poc.PocEngine;
 import com.huamai.poc.PocEngineFactory;
@@ -47,11 +49,11 @@ public class MyApplication extends MultiDexApplication {
         }
     }
 
-    private PocEngine.Configure getConfig() {
-        PocEngine.Configure configure = PocEngineConfigureProducer.getConfig();
+    private Configure getConfig() {
+        Configure configure = PocEngineConfigureProducer.getConfig();
         /** 可选配置 */
         //定位模式
-        configure.gpsMode = IPocEngineEventHandler.GpsMode.NET_AND_GPS;
+        configure.gpsMode = Configure.GpsMode.NET_AND_GPS;
         //位置上报时间间隔，单位秒
         configure.gpsReportInterval = 300;
         //联系人状态刷新时间间隔，单位秒
@@ -63,7 +65,7 @@ public class MyApplication extends MultiDexApplication {
         //防杀服务
         configure.keepLiveService = true;
         //视频通话分辨率，需要和调度台中设置的值一样才能生效
-        configure.videoResolution = IPocEngineEventHandler.VideoResolution.RESOLUTION_640X480;
+        configure.videoResolution = Configure.VideoResolution.RESOLUTION_640X480;
         //缓存提供器，没特殊要求用不到
         //configure.cacheFileSupplier = cacheFileSupplier;
         //侧边功能键注册，一般都用不到
@@ -78,11 +80,11 @@ public class MyApplication extends MultiDexApplication {
      */
     public static class PocEngineConfigureProducer {
 
-        static PocEngine.Configure configure;
+        static Configure configure;
 
-        public static PocEngine.Configure getConfig() {
+        public static Configure getConfig() {
             if (configure == null) {
-                configure = new PocEngine.Configure();
+                configure = new Configure();
                 /** 必须设置 */
                 configure.ip = "123.57.6.84";
                 configure.port = "5060";
@@ -95,7 +97,7 @@ public class MyApplication extends MultiDexApplication {
     /**
      * 缓存文件路径及格式提供器
      */
-    private final IPocEngineEventHandler.CacheFileSupplier cacheFileSupplier = new IPocEngineEventHandler.CacheFileSupplier() {
+    private final CacheFileSupplier cacheFileSupplier = new CacheFileSupplier() {
         @Override
         public String getBaseDir() {
             //TODO 返回一个缓存根目录路径，需要创建
@@ -154,7 +156,8 @@ public class MyApplication extends MultiDexApplication {
      * 机器PTT热键适配：
      * 如果集成了SDK的应用，想要支持多款机器的热键(侧边功能键)，可以在这里进行配置
      */
-    private final IPocEngineEventHandler.BroadcastHotKeyActionSupplier hotKeyActionSupplier = new IPocEngineEventHandler.BroadcastHotKeyActionSupplier() {
+    private final Configure.BroadcastHotKeyActionSupplier hotKeyActionSupplier =
+            new Configure.BroadcastHotKeyActionSupplier() {
         @Override
         public String[] getPttDownActions() {
             return new String[]{
@@ -252,7 +255,7 @@ public class MyApplication extends MultiDexApplication {
         }
 
         @Override
-        public void onIncoming(IncomingInfo incomingInfo) {
+        public void onIncoming(Configure.IncomingInfo incomingInfo) {
             logger.d("onIncoming-> sessionId=" + incomingInfo.sessionId + " type=" + incomingInfo.sessionType + " uid=" +
                     incomingInfo.callerId + " name=" + incomingInfo.callerName + " level=" + incomingInfo.level +
                     " extra=" + incomingInfo.extra);
