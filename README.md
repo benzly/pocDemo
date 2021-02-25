@@ -1,6 +1,6 @@
 # pocDemo
 
-<p align="center"><a title="Chinese" href="README.en.md">🇨🇳 English</a>  |  🇬🇧 中文简体</p>
+<p align="center">🇨🇳 中文简体  |  <a title="English" href="README.en.md">🇬🇧 English</a></p>
 
 ![Logo](https://s.beta.gtimg.com/rdmimg/exp/image2/2018/06/08/_27617a9f-5695-4cd8-ac5a-a05fe10f7525.png)
 
