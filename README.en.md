@@ -19,7 +19,7 @@ An SDK that can use the minimal API to achieve the following functions
 
 
 ### Integrated
-SDK version(https://bintray.com/benzly/notifications)
+> SDK version(https://bintray.com/benzly/notifications)
 In the root directory, edit build.gradle file like this:
 ```groovy
 allprojects {

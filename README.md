@@ -38,8 +38,8 @@ pocSDK requires at minimum Android 4.4(Api level 19).
 
 ## SDK文档
 
-SDK详细使用说明[wiki](https://github.com/benzly/pocDemo/wiki)
-SDK version(https://bintray.com/benzly/notifications)
+* SDK详细使用说明[wiki](https://github.com/benzly/pocDemo/wiki)
+* SDK version(https://bintray.com/benzly/notifications)
 
 ## License
 
