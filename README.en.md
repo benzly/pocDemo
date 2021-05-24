@@ -25,7 +25,13 @@ An SDK that can use the minimal API to achieve the following functions
 allprojects {
     repositories {
         jcenter()
-        maven { url 'https://dl.bintray.com/huamai/maven' }
+       	maven {
+            url "http://39.106.29.203:8081/nexus/repository/maven-releases/"
+            credentials {
+                username = "test"
+                password = "hmdev"
+            }
+        }
     }
 }
 dependencies {
