@@ -6,12 +6,10 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
-
         mavenLocal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
-        classpath 'com.novoda:bintray-release:0.9.2'
     }
 }
 
@@ -20,8 +18,17 @@ allprojects {
         google()
         jcenter()
 
-        maven { url 'https://jitpack.io' }
-        maven { url 'https://dl.bintray.com/benzly/maven' }
+        maven {
+            url 'https://jitpack.io'
+        }
+
+        maven {
+            url "http://39.106.29.203:8081/nexus/repository/maven-releases/"
+            credentials {
+                username = "test"
+                password = "hmdev"
+            }
+        }
     }
 }
 
