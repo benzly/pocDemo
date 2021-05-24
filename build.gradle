@@ -21,7 +21,13 @@ allprojects {
         jcenter()
 
         maven { url 'https://jitpack.io' }
-        maven { url 'https://dl.bintray.com/benzly/maven' }
+        maven {
+            url "http://39.106.29.203:8081/nexus/repository/maven-releases/"
+            credentials {
+                username = "test"
+                password = "hmdev"
+            }
+        }
     }
 }
 
